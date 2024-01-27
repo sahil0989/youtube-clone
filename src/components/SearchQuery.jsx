@@ -44,7 +44,7 @@ function SearchQuery() {
             data.length > 0 ? (<div className='grid overflow-x-hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 p-5'>
               <h2>Search Result : {searchQuery} </h2>
               {data.map((item, i) => (
-                <VideoCard key={item?.id + i} id={item?.id?.videoId} title={item?.snippet?.title} imgUrl={item?.snippet?.thumbnails?.medium?.url} channelInfo={item?.snippet?.channelTitle} />
+                <VideoCard key={item?.id + i} id={item?.id?.videoId} title={item?.snippet?.title} imgUrl={item?.snippet?.thumbnails?.medium?.url} channelInfo={item?.snippet?.channelTitle} date={item?.snippet?.publishedAt} views={item?.statistics?.viewCount} />
               ))}
             </div>) : (<></>)
           }
